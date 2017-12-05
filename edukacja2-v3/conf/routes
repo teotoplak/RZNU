@@ -31,3 +31,8 @@ POST     /users/:userId/cars            controllers.Cars.createCar(userId: Long)
 PUT     /users/:userId/cars/:carId      controllers.Cars.updateCar(userId: Long, carId: Long)
 DELETE     /users/:userId/cars/:carId   controllers.Cars.deleteCar(userId: Long, carId: Long)
 GET    /car-form/:id           controllers.Cars.carForm(id: Long)
+
+#login
+GET     /login                      controllers.Login.login()
+POST    /login                      controllers.Login.loginSubmit()
+GET    /logout                      controllers.Login.logout()

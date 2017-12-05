@@ -8,12 +8,14 @@ import play.data.Form;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Security;
 
 import java.util.List;
 
 /**
  * Created by teo on 12/4/17.
  */
+@Security.Authenticated(Secured.class)
 public class Cars extends Controller {
 
     public Result createCar(Long userId) {

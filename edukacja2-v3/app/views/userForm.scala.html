@@ -1,0 +1,11 @@
+@()
+
+@main("Users form") {
+<h2>New User</h2>
+
+<form action="@routes.Users.createUser()" method="POST">
+    Username <input type="text" name="username">
+    Password <input type="text" name="password">
+        <button type="submit">Submit</button>
+</form>
+}

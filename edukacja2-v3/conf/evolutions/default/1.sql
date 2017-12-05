@@ -3,6 +3,14 @@
 
 # --- !Ups
 
+create table car (
+  id                            bigint not null,
+  model                         varchar(255),
+  user_id                       bigint,
+  constraint pk_car primary key (id)
+);
+create sequence car_seq;
+
 create table course (
   id                            bigint not null,
   name                          varchar(255),
@@ -42,6 +50,17 @@ create table tag (
 );
 create sequence tag_seq;
 
+create table user (
+  id                            bigint not null,
+  username                      varchar(255),
+  password                      varchar(255),
+  constraint pk_user primary key (id)
+);
+create sequence user_seq;
+
+alter table car add constraint fk_car_user_id foreign key (user_id) references user (id) on delete restrict on update restrict;
+create index ix_car_user_id on car (user_id);
+
 alter table enrollment add constraint fk_enrollment_course_id foreign key (course_id) references course (id) on delete restrict on update restrict;
 create index ix_enrollment_course_id on enrollment (course_id);
 
@@ -57,6 +76,9 @@ create index ix_student_tag_tag on student_tag (tag_id);
 
 # --- !Downs
 
+alter table car drop constraint if exists fk_car_user_id;
+drop index if exists ix_car_user_id;
+
 alter table enrollment drop constraint if exists fk_enrollment_course_id;
 drop index if exists ix_enrollment_course_id;
 
@@ -68,6 +90,9 @@ drop index if exists ix_student_tag_student;
 
 alter table student_tag drop constraint if exists fk_student_tag_tag;
 drop index if exists ix_student_tag_tag;
+
+drop table if exists car;
+drop sequence if exists car_seq;
 
 drop table if exists course;
 drop sequence if exists course_seq;
@@ -82,4 +107,7 @@ drop table if exists student_tag;
 
 drop table if exists tag;
 drop sequence if exists tag_seq;
+
+drop table if exists user;
+drop sequence if exists user_seq;
 

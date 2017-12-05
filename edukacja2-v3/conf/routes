@@ -15,3 +15,17 @@ GET     /assets/*file      controllers.Assets.at(path="/public", file)
 GET     /webjars/*file     controllers.WebJarAssets.at(file)
 
 GET     /picture/:studId    controllers.Students.picture(studId:Long)
+
+#users
+GET    /users/:id           controllers.Users.readUser(id: Long)
+GET    /users           controllers.Users.readUsers()
+POST   /users          controllers.Users.createUser()
+PUT    /users/:id       controllers.Users.updateUser(id: Long)
+DELETE    /users/:id       controllers.Users.deleteUser(id: Long)
+
+#cars
+GET     /users/:userId/cars/:carId      controllers.Cars.readCar(userId: Long, carId: Long)
+GET     /users/:userId/cars             controllers.Cars.readCars(userId: Long)
+POST     /users/:userId/cars            controllers.Cars.createCar(userId: Long)
+#PUT     /users/:userId/cars/:carId      controllers.Cars.updateCar(userId: Long, carId: Long)
+#DELETE     /users/:userId/cars/:carId   controllers.Cars.deleteCar(userId: Long, carId: Long)

@@ -27,17 +27,24 @@ public class Users extends Controller {
         DynamicForm form = Form.form().bindFromRequest();
         String username = form.get("username");
         String password = form.get("password");
-        User user = new User(username,password);
-        user.cars = new LinkedList<>();
-        user.save();
+        String id = form.get("id");
+        User user;
+        if(id!=null) {
+            user = User.findUser(Long.parseLong(id));
+            user.username = username;
+            user.password = password;
+            user.update();
+        } else {
+            user = new User(username,password);
+            user.cars = new LinkedList<>();
+            user.save();
+        }
         return redirect(routes.Users.readUser(user.id));
     }
 
 
     public Result readUsers() {
-
         return ok(views.html.getUsers.render(User.findAll()));
-
     }
 
     public Result readUser(Long id) {
@@ -73,6 +80,11 @@ public class Users extends Controller {
     }
 
     public Result userForm() {
-        return ok(views.html.userForm.render());
+        return ok(views.html.userForm.render(null));
     }
+    public Result userFormEdit(Long id) {
+        User user = User.findUser(id);
+        return ok(views.html.userForm.render(user));
+    }
+
 }

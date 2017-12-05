@@ -24,9 +24,18 @@ public class Cars extends Controller {
         User user = User.findUser(userId);
         DynamicForm form = Form.form().bindFromRequest();
         String model = form.get("model");
-        Car car = new Car(model);
-        car.user = user;
-        car.save();
+        String id = form.get("id");
+        Car car;
+        if(id!=null) {
+            car = Car.findCar(Long.parseLong(id));
+            car.model = model;
+            car.update();
+        } else {
+            car = new Car(model);
+            car.user = user;
+            car.save();
+        }
+
         return redirect(routes.Cars.readCar(userId,car.id));
     }
 
@@ -64,7 +73,11 @@ public class Cars extends Controller {
     }
 
     public Result carForm(Long userId) {
-        return ok(views.html.carForm.render(userId));
+        return ok(views.html.carForm.render(userId,null));
+    }
+    public Result carFormEdit(Long userId, Long carId) {
+        Car car = Car.findCar(carId);
+        return ok(views.html.carForm.render(userId,car));
     }
 
 }

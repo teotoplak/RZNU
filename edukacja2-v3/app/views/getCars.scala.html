@@ -15,6 +15,7 @@
         <tr>
             <td>@car.id</td>
             <td>@car.model</td>
+            <td><a href="@routes.Cars.carFormEdit(user.id,car.id)"><i class="glyphicon glyphicon-edit"></i></a></td>
             <td><a onclick="del('@routes.Cars.deleteCar(user.id,car.id)')"><i class="glyphicon glyphicon-trash"></i></a></td>
         </tr>
     }

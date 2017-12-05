@@ -15,6 +15,7 @@
         <tr>
             <td><a href="@routes.Users.readUser(user.id)">@user.username</a></td>
             <td>@user.password</td>
+            <td><a href="@routes.Users.userFormEdit(user.id)"><i class="glyphicon glyphicon-edit"></i></a></td>
             <td><a onclick="del('@routes.Users.deleteUser(user.id)')"><i class="glyphicon glyphicon-trash"></i></a></td>
         </tr>
     }

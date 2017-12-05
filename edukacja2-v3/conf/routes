@@ -23,6 +23,7 @@ POST   /users          controllers.Users.createUser()
 PUT    /users/:id       controllers.Users.updateUser(id: Long)
 DELETE    /users/:id       controllers.Users.deleteUser(id: Long)
 GET    /user-form           controllers.Users.userForm()
+GET    /user-form-edit/:id           controllers.Users.userFormEdit(id: Long)
 
 #cars
 GET     /users/:userId/cars/:carId      controllers.Cars.readCar(userId: Long, carId: Long)
@@ -31,6 +32,7 @@ POST     /users/:userId/cars            controllers.Cars.createCar(userId: Long)
 PUT     /users/:userId/cars/:carId      controllers.Cars.updateCar(userId: Long, carId: Long)
 DELETE     /users/:userId/cars/:carId   controllers.Cars.deleteCar(userId: Long, carId: Long)
 GET    /car-form/:id           controllers.Cars.carForm(id: Long)
+GET    /car-form-edit/:userId/:carId           controllers.Cars.carFormEdit(userId: Long, carId: Long)
 
 #login
 GET     /login                      controllers.Login.login()

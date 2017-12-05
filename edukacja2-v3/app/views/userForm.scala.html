@@ -1,10 +1,11 @@
-@()
+@(user: User)
+@edit = @{user!=null}
     @main("Users form") {
         <h2>New User</h2>
-
         <form action="@routes.Users.createUser()" method="post">
-            Username <input type="text" name="username">
-            Password <input type="text" name="password">
+            @if(edit) {<input type="hidden" name="id" value="@user.id">}
+            Username <input type="text" name="username" @if(edit){value="@user.username"}>
+            Password <input type="text" name="password" @if(edit){value="@user.password"}>
             <button type="submit">Submit</button>
         </form>
     }

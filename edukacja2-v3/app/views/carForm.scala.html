@@ -1,9 +1,10 @@
-@(userId: Long)
+@(userId: Long, car: Car)
+@edit = @{car!=null}
     @main("Car form") {
         <h2>New car</h2>
-
         <form action="@routes.Cars.createCar(userId)" method="post">
-            Username <input type="text" name="model">
+            @if(edit){<input type="hidden" value="@car.id" name="id"> }
+            Username <input type="text" name="model" @if(edit){value="@car.model"}>
             <button type="submit">Submit</button>
         </form>
     }

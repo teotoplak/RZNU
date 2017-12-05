@@ -25,7 +25,6 @@ public class Cars extends Controller {
         Car car = Json.fromJson(json,Car.class);
         car.user = user;
         car.save();
-        System.out.println(user.cars.size());
         return ok(Json.toJson(car));
     }
 
@@ -39,25 +38,25 @@ public class Cars extends Controller {
         return ok(Json.toJson(car));
     }
 
-    public Result deleteCar(Long id) {
-        User user = User.findUser(id);
-        user.delete();
+    public Result deleteCar(Long userId, Long carId) {
+        Car car = Car.findCar(carId);
+        car.delete();
         return ok();
     }
 
-    public Result updateCar(Long id) {
-        User user = User.findUser(id);
+    public Result updateCar(Long userId, Long carId) {
+        Car car = Car.findCar(carId);
+        User user = User.findUser(userId);
         JsonNode json = request().body().asJson();
-        String username = json.findPath("username").textValue();
-        String password = json.findPath("password").textValue();
-        if(user == null) {
-            user = Json.fromJson(json,User.class);
-            user.id = id;
-            user.save();
+        String model = json.findPath("model").textValue();
+        if(car == null) {
+            car = Json.fromJson(json,Car.class);
+            car.id = carId;
+            car.user = user;
+            car.save();
         } else {
-            user.username = username;
-            user.password = password;
-            user.update();
+            car.model = model;
+            car.update();
         }
         return ok(Json.toJson(user));
     }

@@ -3,6 +3,8 @@ package controllers;
 import com.fasterxml.jackson.databind.JsonNode;
 import models.Car;
 import models.User;
+import play.data.DynamicForm;
+import play.data.Form;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -14,28 +16,24 @@ import java.util.List;
  */
 public class Cars extends Controller {
 
-    public Result list() {
-        List<User> users = User.findAll();
-        return ok(views.html.users.render(users));
-    }
-
     public Result createCar(Long userId) {
         User user = User.findUser(userId);
-        JsonNode json = request().body().asJson();
-        Car car = Json.fromJson(json,Car.class);
+        DynamicForm form = Form.form().bindFromRequest();
+        String model = form.get("model");
+        Car car = new Car(model);
         car.user = user;
         car.save();
-        return ok(Json.toJson(car));
+        return redirect(routes.Cars.readCar(userId,car.id));
     }
 
     public Result readCars(Long userId) {
         User user = User.findUser(userId);
-        return ok(Json.toJson(user.cars));
+        return ok(views.html.getCars.render(user.cars,user));
     }
 
     public Result readCar(Long userId, Long carId) {
         Car car = Car.findCar(carId);
-        return ok(Json.toJson(car));
+        return ok(views.html.getCar.render(car));
     }
 
     public Result deleteCar(Long userId, Long carId) {
@@ -59,6 +57,10 @@ public class Cars extends Controller {
             car.update();
         }
         return ok(Json.toJson(user));
+    }
+
+    public Result carForm(Long userId) {
+        return ok(views.html.carForm.render(userId));
     }
 
 }

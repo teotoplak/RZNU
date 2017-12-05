@@ -1,0 +1,22 @@
+@(cars: List[Car], user: User)
+
+@main("Cars list") {
+<h2>Cars</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>model</th>
+        </tr>
+    </thead>
+    <tbody>
+    @for(car <- cars) {
+        <tr>
+            <td>@car.id</td>
+            <td>@car.model</td>
+        </tr>
+    }
+</table>
+    <div><a href="@routes.Cars.carForm(user.id)">New</a></div>
+}

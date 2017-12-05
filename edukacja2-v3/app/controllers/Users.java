@@ -2,6 +2,8 @@ package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import models.User;
+import play.data.DynamicForm;
+import play.data.Form;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -14,26 +16,23 @@ import java.util.List;
  */
 public class Users extends Controller {
 
-    public Result list() {
-        List<User> users = User.findAll();
-        return ok(views.html.users.render(users));
-    }
-
     public Result createUser() {
-        JsonNode json = request().body().asJson();
-        User user = Json.fromJson(json,User.class);
+        DynamicForm form = Form.form().bindFromRequest();
+        String username = form.get("username");
+        String password = form.get("password");
+        User user = new User(username,password);
         user.cars = new LinkedList<>();
         user.save();
-        return ok(Json.toJson(user));
+        return redirect(routes.Users.readUser(user.id));
     }
 
     public Result readUsers() {
-        return ok(Json.toJson(User.findAll()));
+        return ok(views.html.getUsers.render(User.findAll()));
     }
 
     public Result readUser(Long id) {
         User user = User.findUser(id);
-        return ok(Json.toJson(user));
+        return ok(views.html.getUser.render(user));
     }
 
     public Result deleteUser(Long id) {
@@ -57,7 +56,10 @@ public class Users extends Controller {
             user.password = password;
             user.update();
         }
-        return ok(Json.toJson(user));
+        return redirect(routes.Users.readUser(user.id));
     }
 
+    public Result userForm() {
+        return ok(views.html.userForm.render());
+    }
 }

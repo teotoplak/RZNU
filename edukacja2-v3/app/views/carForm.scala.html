@@ -1,0 +1,9 @@
+@(userId: Long)
+    @main("Car form") {
+        <h2>New car</h2>
+
+        <form action="@routes.Cars.createCar(userId)" method="post">
+            Username <input type="text" name="model">
+            <button type="submit">Submit</button>
+        </form>
+    }

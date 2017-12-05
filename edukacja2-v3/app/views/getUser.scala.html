@@ -1,0 +1,9 @@
+@(user: User)
+
+@main("Users list") {
+<h2>User</h2>
+    <div>ID: @user.id</div>
+    <div>Username: @user.username</div>
+    <div>Password: @user.password</div>
+    <div><a href="@routes.Cars.readCars(user.id)">Cars</a></div>
+}

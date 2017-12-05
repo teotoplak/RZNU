@@ -1,6 +1,7 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import models.Car;
 import models.User;
 import play.data.DynamicForm;
 import play.data.Form;
@@ -37,6 +38,9 @@ public class Users extends Controller {
 
     public Result deleteUser(Long id) {
         User user = User.findUser(id);
+        for(Car car : user.cars) {
+            car.delete();
+        }
         user.delete();
         return ok();
     }

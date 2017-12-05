@@ -39,7 +39,7 @@ public class Cars extends Controller {
     public Result deleteCar(Long userId, Long carId) {
         Car car = Car.findCar(carId);
         car.delete();
-        return ok();
+        return redirect(routes.Cars.readCars(userId));
     }
 
     public Result updateCar(Long userId, Long carId) {

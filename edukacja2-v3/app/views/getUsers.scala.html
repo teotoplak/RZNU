@@ -15,8 +15,18 @@
         <tr>
             <td><a href="@routes.Users.readUser(user.id)">@user.username</a></td>
             <td>@user.password</td>
+            <td><a onclick="del('@routes.Users.deleteUser(user.id)')"><i class="glyphicon glyphicon-trash"></i></a></td>
         </tr>
     }
 </table>
     <div><a href="@routes.Users.userForm()">New</a></div>
+
+    <script>
+            function del(urlToDelete) {
+                $.ajax({url: urlToDelete, type: 'DELETE', success: function(results) {
+                    location.reload();
+                }
+                });
+            }
+    </script>
 }

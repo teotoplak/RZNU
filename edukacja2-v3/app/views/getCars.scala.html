@@ -15,8 +15,19 @@
         <tr>
             <td>@car.id</td>
             <td>@car.model</td>
+            <td><a onclick="del('@routes.Cars.deleteCar(user.id,car.id)')"><i class="glyphicon glyphicon-trash"></i></a></td>
         </tr>
     }
 </table>
     <div><a href="@routes.Cars.carForm(user.id)">New</a></div>
+
+    <script>
+            function del(urlToDelete) {
+                $.ajax({url: urlToDelete, type: 'DELETE', success: function(results) {
+                    location.reload();
+                }
+                });
+            }
+    </script>
 }
+

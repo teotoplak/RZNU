@@ -1,8 +1,11 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import models.Car;
 import models.User;
+import play.api.Play;
 import play.data.DynamicForm;
 import play.data.Form;
 import play.libs.Json;
@@ -17,6 +20,7 @@ import java.util.List;
  * Created by teo on 12/4/17.
  */
 @Security.Authenticated(Secured.class)
+@Api(value = "user Controller")
 public class Users extends Controller {
 
     public Result createUser() {
@@ -29,8 +33,11 @@ public class Users extends Controller {
         return redirect(routes.Users.readUser(user.id));
     }
 
+
     public Result readUsers() {
+
         return ok(views.html.getUsers.render(User.findAll()));
+
     }
 
     public Result readUser(Long id) {

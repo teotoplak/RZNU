@@ -11,7 +11,8 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   "org.webjars" %% "webjars-play" % "2.4.0-1",
-  "org.webjars" % "bootstrap" % "3.3.7-1"
+  "org.webjars" % "bootstrap" % "3.3.7-1",
+  "io.swagger" %% "swagger-play2" % "1.5.3"
 )
 
 fork in run := false

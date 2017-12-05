@@ -1,6 +1,7 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import io.swagger.annotations.Api;
 import models.Car;
 import models.User;
 import play.data.DynamicForm;
@@ -16,6 +17,7 @@ import java.util.List;
  * Created by teo on 12/4/17.
  */
 @Security.Authenticated(Secured.class)
+@Api(value = "cars Controller")
 public class Cars extends Controller {
 
     public Result createCar(Long userId) {

@@ -1,0 +1,32 @@
+#content {
+    padding: 5px;
+    border-radius: 5px;
+    overflow-y: scroll;
+    border: 1px solid #CCC;
+    margin-top: 10px;
+    height: 400px;
+    border: transparent;
+}
+
+#input {
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    padding: 5px;
+    width: 400px;
+    margin-left: 50px;
+}
+
+#status {
+    display: block;
+    float: left;
+    margin-top: 15px;
+}
+
+.message {
+    padding: 5px 0;
+}
+
+.time {
+    color: darkgrey;
+}

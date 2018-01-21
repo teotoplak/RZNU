@@ -17,8 +17,43 @@
       <file leaf-file-name="chat-server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chat-server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="110" column="35" lean-forward="false" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
+            <state relative-caret-position="342">
+              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+              <folding>
+                <marker date="1516539393720" expanded="true" signature="295:322" ph="/** Global variables ...*/" />
+                <marker date="1516539393720" expanded="true" signature="429:482" ph="/** Helper function for escaping input strings ...*/" />
+                <marker date="1516539393720" expanded="true" signature="510:646" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="802:837" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="840:862" ph="/** HTTP server ...*/" />
+                <marker date="1516539393720" expanded="true" signature="923:1010" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="929:1008" ph="//..." />
+                <marker date="1516539393720" expanded="true" signature="1061:1160" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="1163:1190" ph="/** WebSocket server ...*/" />
+                <marker date="1516539393720" expanded="true" signature="1226:1424" ph="{&quot;httpServer&quot;: server...}" />
+                <marker date="1516539393720" expanded="true" signature="1232:1399" ph="//..." />
+                <marker date="1516539393720" expanded="true" signature="1427:1525" ph="//..." />
+                <marker date="1516539393720" expanded="true" signature="1568:4278" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="1665:1842" ph="//..." />
+                <marker date="1516539393720" expanded="true" signature="2184:2282" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="2361:3808" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="2400:3802" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="2402:2477" ph="//..." />
+                <marker date="1516539393720" expanded="true" signature="2514:2975" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="2981:3792" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="3235:3437" ph="{&quot;author&quot;: userName...}" />
+                <marker date="1516539393720" expanded="true" signature="3713:3778" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="3885:4274" ph="{...}" />
+                <marker date="1516539393720" expanded="true" signature="3942:4268" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -27,8 +62,18 @@
       <file leaf-file-name="chat.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            <state relative-caret-position="126">
+              <caret line="7" column="45" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="7" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chat.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -37,10 +82,14 @@
       <file leaf-file-name="frontend.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+            <state relative-caret-position="434">
+              <caret line="111" column="35" lean-forward="true" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
               <folding>
-                <marker date="1516539842514" expanded="true" signature="4171:4177" ph="..." />
+                <marker date="1516545159194" expanded="true" signature="4177:4258" ph="..." />
+                <marker date="1516545159194" expanded="true" signature="4177:4460" ph="..." />
+                <marker date="1516545159194" expanded="true" signature="4191:4197" ph="..." />
+                <marker date="1516545159194" expanded="true" signature="4191:4205" ph="..." />
+                <marker date="1516545159194" expanded="true" signature="4206:4237" ph="..." />
               </folding>
             </state>
           </provider>
@@ -53,6 +102,7 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -65,13 +115,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/frontend.js" />
         <option value="$PROJECT_DIR$/src/chat.html" />
+        <option value="$PROJECT_DIR$/src/frontend.js" />
+        <option value="$PROJECT_DIR$/src/chat.css" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -142,6 +199,13 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -623,12 +687,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516538717721</updated>
-      <workItem from="1516538719180" duration="1336000" />
+      <workItem from="1516538719180" duration="4670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1336000" />
+    <option name="totallyTimeSpent" value="4670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1345" y="24" width="1855" height="1056" extended-state="6" />
@@ -645,7 +709,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36511156" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2535497" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -674,6 +738,10 @@
     <breakpoint-manager />
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/websocket/lib/WebSocketRequest.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -691,31 +759,163 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/chat-server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="110" column="35" lean-forward="false" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="342">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding>
+            <marker date="1516539393720" expanded="true" signature="295:322" ph="/** Global variables ...*/" />
+            <marker date="1516539393720" expanded="true" signature="429:482" ph="/** Helper function for escaping input strings ...*/" />
+            <marker date="1516539393720" expanded="true" signature="510:646" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="802:837" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="840:862" ph="/** HTTP server ...*/" />
+            <marker date="1516539393720" expanded="true" signature="923:1010" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="929:1008" ph="//..." />
+            <marker date="1516539393720" expanded="true" signature="1061:1160" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="1163:1190" ph="/** WebSocket server ...*/" />
+            <marker date="1516539393720" expanded="true" signature="1226:1424" ph="{&quot;httpServer&quot;: server...}" />
+            <marker date="1516539393720" expanded="true" signature="1232:1399" ph="//..." />
+            <marker date="1516539393720" expanded="true" signature="1427:1525" ph="//..." />
+            <marker date="1516539393720" expanded="true" signature="1568:4278" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="1665:1842" ph="//..." />
+            <marker date="1516539393720" expanded="true" signature="2184:2282" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="2361:3808" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="2400:3802" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="2402:2477" ph="//..." />
+            <marker date="1516539393720" expanded="true" signature="2514:2975" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="2981:3792" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="3235:3437" ph="{&quot;author&quot;: userName...}" />
+            <marker date="1516539393720" expanded="true" signature="3713:3778" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="3885:4274" ph="{...}" />
+            <marker date="1516539393720" expanded="true" signature="3942:4268" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+        <state relative-caret-position="434">
+          <caret line="111" column="35" lean-forward="true" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
           <folding>
-            <marker date="1516539842514" expanded="true" signature="4171:4177" ph="..." />
+            <marker date="1516545159194" expanded="true" signature="4177:4258" ph="..." />
+            <marker date="1516545159194" expanded="true" signature="4177:4460" ph="..." />
+            <marker date="1516545159194" expanded="true" signature="4191:4197" ph="..." />
+            <marker date="1516545159194" expanded="true" signature="4191:4205" ph="..." />
+            <marker date="1516545159194" expanded="true" signature="4206:4237" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chat.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/chat.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        <state relative-caret-position="126">
+          <caret line="7" column="45" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="7" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>api</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>chat</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

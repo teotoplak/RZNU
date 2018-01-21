@@ -9,7 +9,7 @@ $(function () {
     // my name sent to the server
     var myName = false;
     // if user is running mozilla then use it's built-in WebSocket
-    window.WebSocket = window.WebSocket || window.MozWebSocket;
+    // window.WebSocket = window.WebSocket || window.MozWebSocket;
     // if browser doesn't support WebSocket, just show
     // some notification and exit
     if (!window.WebSocket) {
@@ -106,11 +106,10 @@ $(function () {
      * Add message to the chat window
      */
     function addMessage(author, message, color, dt) {
-        content.prepend('<p><span style="color:' + color + '">'
-            + author + '</span> @ ' + (dt.getHours() < 10 ? '0'
-                + dt.getHours() : dt.getHours()) + ':'
+        content.prepend(` <p class="message"><span style="color:${color}">
+             ${author} </span> <span class="time">(${
+            (dt.getHours() < 10 ? '0' + dt.getHours() : dt.getHours()) + ':' 
             + (dt.getMinutes() < 10
-                ? '0' + dt.getMinutes() : dt.getMinutes())
-            + ': ' + message + '</p>');
+                ? '0' + dt.getMinutes() : dt.getMinutes())})</span> : ${message} </p>`);
     }
 });

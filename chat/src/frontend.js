@@ -8,8 +8,9 @@ $(function () {
     var myColor = false;
     // my name sent to the server
     var myName = false;
+
     // if user is running mozilla then use it's built-in WebSocket
-    // window.WebSocket = window.WebSocket || window.MozWebSocket;
+    window.WebSocket = window.WebSocket || window.MozWebSocket;
     // if browser doesn't support WebSocket, just show
     // some notification and exit
     if (!window.WebSocket) {
@@ -65,6 +66,7 @@ $(function () {
             input.removeAttr('disabled');
             addMessage(json.data.author, json.data.text,
                 json.data.color, new Date(json.data.time));
+            input.focus();
         } else {
             console.log('Hmm..., I\'ve never seen JSON like this:', json);
         }
@@ -88,6 +90,7 @@ $(function () {
             if (myName === false) {
                 myName = msg;
             }
+
         }
     });
     /**
@@ -106,10 +109,10 @@ $(function () {
      * Add message to the chat window
      */
     function addMessage(author, message, color, dt) {
-        content.prepend(` <p class="message"><span style="color:${color}">
+        $(` <p class="message"><span style="color:${color}">
              ${author} </span> <span class="time">(${
             (dt.getHours() < 10 ? '0' + dt.getHours() : dt.getHours()) + ':' 
             + (dt.getMinutes() < 10
-                ? '0' + dt.getMinutes() : dt.getMinutes())})</span> : ${message} </p>`);
+                ? '0' + dt.getMinutes() : dt.getMinutes())})</span> : ${message} </p>`).prependTo(content).hide().slideDown();
     }
 });

@@ -1,12 +1,9 @@
 $(function () {
     "use strict";
-    // for better performance - to avoid searching in DOM
     var content = $('#content');
     var input = $('#input');
     var status = $('#status');
-    // my color assigned by the server
     var myColor = false;
-    // my name sent to the server
     var myName = false;
 
     // if user is running mozilla then use it's built-in WebSocket
@@ -35,21 +32,13 @@ $(function () {
             + 'connection or the server is down.'
         }));
     };
-    // most important part - incoming messages
     connection.onmessage = function (message) {
-        // try to parse JSON message. Because we know that the server
-        // always returns JSON this should work without any problem but
-        // we should make sure that the massage is not chunked or
-        // otherwise damaged.
         try {
             var json = JSON.parse(message.data);
         } catch (e) {
             console.log('Invalid JSON: ', message.data);
             return;
         }
-        // NOTE: if you're not sure about the JSON structure
-        // check the server source code above
-        // first response from the server with user's color
         if (json.type === 'color') {
             myColor = json.data;
             status.text(myName + ': ').css('color', myColor);

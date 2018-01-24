@@ -1,18 +1,17 @@
 "use strict";
-// Optional. You will see this name in eg. 'ps' or 'top' command
 process.title = 'node-chat';
-// Port where we'll run the websocket server
-var webSocketsServerPort = 1337;
-// websocket and http servers
-var webSocketServer = require('websocket').server;
-var http = require('http');
-/**
- * Global variables
- */
+
+const webSocketsServerPort = 1337;
+let webSocketServer = require('websocket').server;
+let http = require('http');
+
+
 // latest 100 messages
-var history = [];
+let history = [];
 // list of currently connected clients (users)
-var clients = [];
+let clients = [];
+
+
 /**
  * Helper function for escaping input strings
  */
@@ -21,6 +20,7 @@ function htmlEntities(str) {
         .replace(/&/g, '&amp;').replace(/</g, '&lt;')
         .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
+
 // Array with some colors
 var colors = ['red', 'green', 'blue', 'magenta', 'purple', 'plum', 'orange'];
 // ... in random order
@@ -31,8 +31,7 @@ colors.sort(function (a, b) {
  * HTTP server
  */
 var server = http.createServer(function (request, response) {
-    // Not important for us. We're writing WebSocket server,
-    // not HTTP server
+
 });
 server.listen(webSocketsServerPort, function () {
     console.log((new Date()) + " Server is listening on port "
@@ -43,8 +42,7 @@ server.listen(webSocketsServerPort, function () {
  */
 var wsServer = new webSocketServer({
     // WebSocket server is tied to a HTTP server. WebSocket
-    // request is just an enhanced HTTP request. For more info
-    // http://tools.ietf.org/html/rfc6455#page-6
+    // request is just an enhanced HTTP request
     httpServer: server
 });
 // This callback function is called every time someone

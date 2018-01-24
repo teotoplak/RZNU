@@ -3,7 +3,6 @@ $(function () {
     var content = $('#content');
     var input = $('#input');
     var status = $('#status');
-    var myColor = false;
     var myName = false;
 
     // if user is running mozilla then use it's built-in WebSocket
@@ -39,22 +38,20 @@ $(function () {
             console.log('Invalid JSON: ', message.data);
             return;
         }
-        if (json.type === 'color') {
-            myColor = json.data;
-            status.text(myName + ': ').css('color', myColor);
-            input.removeAttr('disabled').focus();
-            // from now user can start sending messages
+        if(json.type == 'ready') {
+            input.removeAttr('disabled');
+            status.text('Send message');
+            input.focus();
+
         } else if (json.type === 'history') { // entire message history
             // insert every single message to the chat window
             for (var i=0; i < json.data.length; i++) {
-                addMessage(json.data[i].author, json.data[i].text,
-                    json.data[i].color, new Date(json.data[i].time));
+                addMessage(json.data[i].author, json.data[i].text, new Date(json.data[i].time));
             }
         } else if (json.type === 'message') { // it's a single message
             // let the user write another message
             input.removeAttr('disabled');
-            addMessage(json.data.author, json.data.text,
-                json.data.color, new Date(json.data.time));
+            addMessage(json.data.author, json.data.text, new Date(json.data.time));
             input.focus();
         } else {
             console.log('Hmm..., I\'ve never seen JSON like this:', json);
@@ -97,8 +94,8 @@ $(function () {
     /**
      * Add message to the chat window
      */
-    function addMessage(author, message, color, dt) {
-        $(` <p class="message"><span style="color:${color}">
+    function addMessage(author, message, dt) {
+        $(` <p class="message"><span>
              ${author} </span> <span class="time">(${
             (dt.getHours() < 10 ? '0' + dt.getHours() : dt.getHours()) + ':' 
             + (dt.getMinutes() < 10
